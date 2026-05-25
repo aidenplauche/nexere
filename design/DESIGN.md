@@ -31,7 +31,7 @@
 
 ### Primary Design Requirements
 A. File Management
-  1. Create, rename, delete, and move markdown files and folders
+  1. Create, rename, delete, duplicate, and move markdown files and folders
   2. Upload and download non-markdown files (images, videos, etc.)
   3. Preview supported non-markdown files
   4. Real-time replication of any changes to file hierarchy (incl. new files)
@@ -51,6 +51,12 @@ D. Administration (server-side only)
   3. Create, view, remove, and configure project backups
   4. Set a simple password required before a user is "trusted"
 
+### Design Notes:
+- Files are actually stored flat, with their name as their ID
+- SQLite Database acts as translation layer between file ID and hierarchical structure
+- Any file can have children files (no restriction on what can act as a folder)
+- Users cannot have the same username or exact hex color code (we decided)
+
 ---
 
 ### Software Architecture
@@ -62,3 +68,10 @@ D. Administration (server-side only)
     - i.e., CLIENT enabled, SERVER enabled
   - Server mode - spawns server infra headlessly, other users and server owner connect to server IP / port
     - i.e., CLIENT disabled, SERVER enabled
+
+---
+
+### Future Enhancements
+- Extensions (dice roller, stop watch, template)
+- Clickable images (like an interactive map)
+- File permissions (read-only files and hidden files)
