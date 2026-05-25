@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="appwindow">
+            <div class="headerbar">
+                <div class="headeritem">
+                    <h3 class="projectname">Project Name</h3>
+                </div>
+                <div class="rowitems">
+                    <div class="headeritem">
+                        <h3 class="servername">Server Name</h3>
+                    </div>
+                    <p class="connectionstatus">Connected</p>
+                </div>
+                <h3 class="username-1">User</h3>
+            </div>
+            <div class="mainwindow">
+                <div class="sidebar">
+                    <div class="controls">
+                        <p class="controlbutton">🔍</p>
+                        <p class="controlbutton">➕</p>
+                    </div>
+                    <ol class="folderlist">
+                        <li class="listitem folder collapsed">Folder 1</li>
+                        <li class="listitem folder collapsed">Folder 2</li>
+                        <li class="listitem folder expanded">Folder 3</li>
+                        <li class="listitem file indent selected" style="--indent-level: 1;">New File</li>
+                        <li class="listitem folder indent expanded" style="--indent-level: 1;">Subfolder</li>
+                        <li class="listitem file indent" style="--indent-level: 2;">New File 2</li>
+                        <li class="listitem file">File 1</li>
+                        <li class="listitem file">File 2</li>
+                    </ol>
+                </div>
+                <div class="maincontent">
+                    <div class="contentheader">
+                        <div class="rowitems">
+                            <h4 class="filename">New File</h4>
+                            <div class="togglebutton">
+                                Markdown Mode
+                            </div>
+                        </div>
+                        <div class="rowitems">
+                            <h4 class="username-1">User</h4>
+                            <h4 class="username-2">Friend</h4>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p class="markdown" style="display: inline">### Welcome to Nexere!</p>
+                        <p class="blinky" style="color: blue;">_</p>
+                        <br><br>
+                        <p class="markdown" style="display: inline;">The collaborative markdown note taker.</p>
+                        <p class="blinky" style="color: green;">_</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
